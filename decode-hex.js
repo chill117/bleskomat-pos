@@ -1,0 +1,1 @@
+console.log(Buffer.from(process.argv[2].replace(/ /g, ''), 'hex').toString('utf8'));

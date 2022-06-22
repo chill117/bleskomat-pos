@@ -142,5 +142,14 @@ namespace util {
 		out << std::fixed << value;
 		return out.str();
 	}
+
+	std::string bytesToHex(const uint8_t* bytes, const size_t &size) {
+		std::stringstream ss;
+		ss << std::hex;
+		for ( uint16_t index = 0; index < size; index++ ) {
+			ss << std::setw(2) << std::setfill('0') << (int)bytes[index];
+		}
+		return util::toUpperCase(ss.str());
+	}
 }
 

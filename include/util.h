@@ -31,6 +31,7 @@ namespace util {
 	std::string toUpperCase(std::string s);
 	std::vector<float> stringListToFloatVector(const std::string &stringList, const char &delimiter = ',');
 	std::string doubleToStringWithPrecision(const double &value, const unsigned short &precision = 6);
+	std::string bytesToHex(const uint8_t* bytes, const size_t &size);
 }
 
 #endif

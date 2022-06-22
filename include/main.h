@@ -6,6 +6,7 @@
 #include "json-rpc.h"
 #include "keypad.h"
 #include "logger.h"
+#include "nfc.h"
 #include "power.h"
 #include "screen.h"
 #include "spiffs.h"

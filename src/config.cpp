@@ -14,6 +14,8 @@ namespace {
 		{ "keypadCharList", "123456789*0#" },
 		{ "locale", "en" },
 		{ "tftRotation", "1" },
+		{ "nfcSSPin", "5" },
+		{ "nfcRSTPin", "27" },
 		{ "sleepModeDelay", "30000" },
 		{ "batteryMaxVolts", "4.2" },
 		{ "batteryMinVolts", "2.5" },

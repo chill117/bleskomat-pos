@@ -40,6 +40,7 @@ void setup() {
 	logger::write(config::getConfigurationsAsString());
 	power::init();
 	jsonRpc::init();
+	nfc::init();
 	screen::init();
 	keypad::init();
 	const unsigned short fiatPrecision = config::getUnsignedShort("fiatPrecision");
@@ -111,6 +112,7 @@ void handleSleepMode() {
 void runAppLoop() {
 	power::loop();
 	handleSleepMode();
+	nfc::loop();
 	keypad::loop();
 	const std::string currentScreen = screen::getCurrentScreen();
 	if (currentScreen == "") {
