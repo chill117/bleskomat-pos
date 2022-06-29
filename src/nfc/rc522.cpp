@@ -174,7 +174,12 @@ namespace nfc_rc522 {
 			logger::write("NFC Tag Type = \"" + std::string(String(rfid->PICC_GetTypeName(piccType)).c_str()) + "\"");
 			dumpTagInfo();
 			if (piccType == MFRC522::PICC_TYPE_MIFARE_1K) {
-				bytes = read_MifareClassic1k();
+				MFRC522::MIFARE_Key key;
+				for (byte i = 0; i < MFRC522::MF_KEY_SIZE; i++) {
+					key.keyByte[i] = knownKeys[1][i];
+				}
+				rfid->PICC_DumpMifareClassicToSerial(&rfid->uid, piccType, &key);
+				// bytes = read_MifareClassic1k();
 			} else if (piccType == MFRC522::PICC_TYPE_MIFARE_UL) {
 				bytes = read_MifareUltralight();
 			} else {

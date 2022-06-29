@@ -138,11 +138,11 @@ namespace config {
 		// values["uriSchemaPrefix"] = "";
 		// values["fiatCurrency"] = "EUR";
 		// values["fiatPrecision"] = "2";
-		// values["keypadRowPins"] = "21,27,26,22";
-		// values["keypadColPins"] = "33,32,25";
-		// values["keypadCharList"] = "123456789*0#";
+		values["keypadRowPins"] = "13,14,26,25";
+		values["keypadColPins"] = "33,32,15,21";
+		values["keypadCharList"] = "123A456B789C*0#D";
 		// values["locale"] = "en";
-		// values["tftRotation"] = "2";
+		values["tftRotation"] = "3";
 		// values["sleepModeDelay"] = "30000";
 		// values["batteryMaxVolts"] = "4.2";
 		// values["batteryMinVolts"] = "2.5";
